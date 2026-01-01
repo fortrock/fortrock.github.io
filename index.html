@@ -3,110 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SreeKumar K | Data Analyst Portfolio</title>
+<title>Data Analyst Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 :root {
-    --bg: #f5f7fa;
-    --card: #ffffff;
-    --text: #333;
-    --primary: #0a66c2;
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --border: #30363d;
 }
 
-[data-theme="dark"] {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e5e7eb;
-    --primary: #38bdf8;
+.light {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #57606a;
+    --accent: #0969da;
+    --border: #d0d7de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
     transition: all 0.3s ease;
 }
 
 header {
-    background: var(--primary);
-    color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 3rem 1rem;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+header h1 {
+    color: var(--accent);
+    font-size: 2.5rem;
+}
+
+header p {
+    color: var(--muted);
+    margin: 0.5rem 0 1rem;
 }
 
 button {
-    background: white;
-    color: var(--primary);
+    background: var(--accent);
+    color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    margin: 0.3rem;
 }
 
 section {
     max-width: 1100px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 2rem 1rem;
 }
 
 h2 {
-    border-bottom: 3px solid var(--primary);
-    display: inline-block;
-    padding-bottom: 5px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 1.5rem;
 }
 
-.skills span {
-    display: inline-block;
+.card {
     background: var(--card);
-    padding: 8px 14px;
-    margin: 6px;
-    border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
 }
 
+/* Projects */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 1.5rem;
 }
 
-.project-card {
-    background: var(--card);
+.project {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    background: var(--card);
+    border: 1px solid var(--border);
 }
 
-.project-card img {
+.project img {
     width: 100%;
     height: 160px;
     object-fit: cover;
 }
 
-.project-card div {
-    padding: 15px;
+.project div {
+    padding: 1rem;
 }
 
-.project-card a {
-    color: var(--primary);
-    font-weight: bold;
+.project h3 {
+    color: var(--accent);
+}
+
+.project p {
+    color: var(--muted);
+    margin: 0.5rem 0;
+}
+
+a {
+    color: var(--accent);
     text-decoration: none;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: var(--primary);
-    color: white;
+    padding: 2rem;
+    color: var(--muted);
 }
 </style>
 </head>
@@ -114,204 +132,104 @@ footer {
 <body>
 
 <header>
-    <h1>Sree Kumar</h1>
-    <p>Data Analyst | Pricing Analyst | Python | SQL</p>
-    <p>
-        <a href="https://github.com/fortrock">GitHub</a>
-        <a href="https://www.linkedin.com/in/sreekumar007/">LinkedIn</a>
-        <a href=" Sreekumar CV" download>Download Resume</a>
-    </p>
-    <button onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+    <h1>Your Name</h1>
+    <p>Data Analyst | Python | SQL | Power BI</p>
+
+    <a href="resume.pdf" download>
+        <button>📄 Download Resume</button>
+    </a>
+    <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </header>
 
 <section>
-<h2>About Me</h2>
-<p>
-Pricing Analyst with 3+ years of experience at Amazon (MENA),
-specializing in customer behavior analysis, competitive pricing,
-and business insights using Python, SQL, and BI tools.
-</p>
-</section>
-
-<section>
-<h2>Skills</h2>
-<div class="skills">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Power BI</span>
-    <span>Excel</span>
-    <span>Pricing Analytics</span>
-    <span>Statistics</span>
-    <span>Business Intelligence</span>
-</div>
-</section>
-
-<section>
-<h2>Projects</h2>
-<div class="projects">
-
-    <div class="project-card">
-        <img src="https://via.placeholder.com/400x200" alt="Project">
-        <div>
-            <h3>Customer Behavior Analysis</h3>
-            <p>End-to-end analysis on customer segmentation and insights.</p>
-            <a href="https://github.com/yourusername/customer-behavior">View Project</a>
-        </div>
+    <h2>About Me</h2>
+    <div class="card">
+        Data Analyst with experience in transforming data into business insights
+        using Python, SQL, and BI tools.
     </div>
+</section>
 
-    <div class="project-card">
-        <img src="https://via.placeholder.com/400x200" alt="Project">
-        <div>
-            <h3>Pricing Strategy Optimization</h3>
-            <p>Optimized pricing using historical sales & competitor data.</p>
-            <a href="https://github.com/yourusername/pricing-strategy">View Project</a>
-        </div>
+<section>
+    <h2>Skills Overview</h2>
+    <div class="card">
+        <canvas id="skillsChart"></canvas>
     </div>
-
-</div>
 </section>
 
 <section>
-<h2>Experience</h2>
-<p><strong>Pricing Analyst – Amazon MENA</strong></p>
-<p>
-Led pricing analysis, competitor benchmarking, and revenue-impact
-projects supporting large-scale retail operations.
-</p>
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <img src="images/project1.png">
+            <div>
+                <h3>Customer Behavior Analysis</h3>
+                <p>Python & SQL based customer insights.</p>
+                <a href="#">View Project →</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project2.png">
+            <div>
+                <h3>Sales Dashboard (Power BI)</h3>
+                <p>Interactive KPI dashboards.</p>
+                <a href="#">View Project →</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project3.png">
+            <div>
+                <h3>Pricing Optimization</h3>
+                <p>Elasticity & competitor pricing analysis.</p>
+                <a href="#">View Project →</a>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <section>
-<h2>Contact</h2>
-<p>Email: sreekumarfortrock007@email.com</p>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>GitHub: github.com/yourusername</p>
+    </div>
 </section>
 
 <footer>
-<p>© 2026 SreeKumar K | GitHub Portfolio</p>
+    © 2026 Your Name | Data Analyst Portfolio
 </footer>
 
 <script>
 function toggleTheme() {
-    document.body.dataset.theme =
-        document.body.dataset.theme === "dark" ? "light" : "dark";
+    document.body.classList.toggle("light");
 }
+
+const ctx = document.getElementById('skillsChart');
+new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['Python', 'SQL', 'Power BI', 'Excel', 'Statistics', 'Visualization'],
+        datasets: [{
+            label: 'Skill Level',
+            data: [85, 90, 80, 85, 75, 80],
+            fill: true
+        }]
+    },
+    options: {
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
 </script>
 
-</body>
-</html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sreekumar K | Data Analyst Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    .dark-mode {
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-    .dark-mode .bg-white { background-color: #1e293b; color: #f1f5f9; }
-    .dark-mode .bg-gray-100 { background-color: #334155; color: #f1f5f9; }
-    .dark-mode .bg-blue-700 { background-color: #2563eb; }
-  </style>
-</head>
-
-<body class="bg-gray-50 text-gray-900 transition-colors duration-300">
-  <!-- Header -->
-  <header class="bg-blue-700 text-white py-8 shadow-md">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-2">Sreekumar K</h1>
-      <h2 class="text-lg font-medium">Data Analyst</h2>
-      <p class="mt-2 text-gray-100">Dynamic Data professional with 3 years of experience in the E-commerce domain.<br>
-      Proficient in SQL, Python, Excel, Power BI, EDA, Storytelling, and Problem Solving.</p>
-
-      <div class="mt-4 flex justify-center space-x-4">
-        <a href="https://www.linkedin.com/in/sreekumar007" class="hover:text-yellow-300"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="mailto:Sreekumarfortrock007@gmail.com" class="hover:text-yellow-300"><i class="fas fa-envelope fa-lg"></i></a>
-        <a href="https://github.com/fortrock" class="hover:text-yellow-300"><i class="fab fa-github fa-lg"></i></a>
-      </div>
-
-      <button id="darkToggle" class="mt-4 bg-white text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
-        🌙 Toggle Dark Mode
-      </button>
-    </div>
-  </header>
-
-  <!-- Skills Section -->
-  <section class="py-12 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl font-semibold text-center mb-6 text-blue-700">Skills</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
-        <div class="bg-gray-100 p-3 rounded-lg shadow">SQL</div>
-        <div class="bg-gray-100 p-3 rounded-lg shadow">Python</div>
-        <div class="bg-gray-100 p-3 rounded-lg shadow">Power BI</div>
-        <div class="bg-gray-100 p-3 rounded-lg shadow">Machine Learning</div>
-        <div class="bg-gray-100 p-3 rounded-lg shadow">EDA</div>
-        <div class="bg-gray-100 p-3 rounded-lg shadow">Storytelling</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="py-12 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl font-semibold text-center mb-8 text-blue-700">Projects</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-lg font-bold mb-2">Customer Trends Data Analysis</h4>
-          <p class="text-gray-700 mb-2">SQL | Python | Power BI</p>
-          <p class="text-sm text-gray-600 mb-4">Analyzed customer purchasing patterns, seasonal trends, and retention metrics using SQL, Python, and Power BI.</p>
-          <a href="https://github.com/fortrock/Customer-trends-data-analysis-SQL-Python-PowerBI" target="_blank" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">View Project</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-lg font-bold mb-2">Delhivery Logistics Data Analysis</h4>
-          <p class="text-gray-700 mb-2">SQL | Power BI</p>
-          <p class="text-sm text-gray-600 mb-4">Built interactive dashboards to track shipment performance, delivery efficiency, and route optimization insights.</p>
-          <a href="https://github.com/fortrock/Delhivery-Logistics-Data-Analysis" target="_blank" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">View Project</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-lg font-bold mb-2">Supply Chain Analytics Dashboard</h4>
-          <p class="text-gray-700 mb-2">SQL | Power BI</p>
-          <p class="text-sm text-gray-600 mb-4">Created KPIs to monitor vendor performance, inventory flow, and transportation metrics across supply chain nodes.</p>
-          <a href="https://github.com/fortrock/Vendor-Performance-Analysis-Python-Power-BI" target="_blank" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">View Project</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-lg font-bold mb-2">Supply Chain Analytics Dashboard</h4>
-          <p class="text-gray-700 mb-2">SQL | Power BI</p>
-          <p class="text-sm text-gray-600 mb-4">Created KPIs to monitor  supply chain performance, focusing on product sales, stock levels, order quantities.</p>
-          <a href="https://github.com/fortrock/Supply-Chain-Analytics-Power-BI-Dashboard" target="_blank" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">View Project</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="py-12 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-2xl font-semibold mb-4 text-blue-700">Get in Touch</h3>
-      <p class="text-gray-700 mb-6">Feel free to reach out for collaborations, data analysis discussions, or project ideas!</p>
-      <div class="space-x-4">
-        <a href="mailto:Sreekumarfortrock007@gmail.com" class="bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Email Me</a>
-        <a href="https://www.linkedin.com/in/sreekumar007" target="_blank" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-700 text-center text-white py-4">
-    <p class="text-sm">&copy; 2025 Sreekumar K. Built with ❤️ using GitHub Pages.</p>
-  </footer>
-
-  <script>
-    const toggleButton = document.getElementById('darkToggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
