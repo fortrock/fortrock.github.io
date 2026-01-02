@@ -103,7 +103,7 @@
 
       <!-- Project 1 -->
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="card w-100 h-100 shadow" data-toggle="modal" data-target="#vendorModal" style="cursor:pointer;">
+        <div class="card project-card w-100 h-100 shadow" data-toggle="modal" data-target="#vendorModal" style="cursor:pointer;">
           <img src="Images/project/Vendor_performance.png" class="card-img-top" alt="Vendor Performance Project">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Vendor Performance Analysis Using Python</h5>
@@ -113,7 +113,7 @@
 
       <!-- Project 2 -->
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="card w-100 h-100 shadow" data-toggle="modal" data-target="#customerModal" style="cursor:pointer;">
+        <div class="card project-card w-100 h-100 shadow" data-toggle="modal" data-target="#customerModal" style="cursor:pointer;">
           <img src="Images/project/Customer_behavior.png" class="card-img-top" alt="Customer Behavior Project">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Customer Behavior Analysis Using SQL</h5>
@@ -123,7 +123,7 @@
 
       <!-- Project 3 -->
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="card w-100 h-100 shadow" data-toggle="modal" data-target="#supplyModal" style="cursor:pointer;">
+        <div class="card project-card w-100 h-100 shadow" data-toggle="modal" data-target="#supplyModal" style="cursor:pointer;">
           <img src="Images/project/Supplychain_overview.jpg" class="card-img-top" alt="Supply chain Project">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Supply Chain Analysis</h5>
@@ -133,7 +133,7 @@
 
       <!-- Project 4 -->
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="card w-100 h-100 shadow" data-toggle="modal" data-target="#logisticsModal" style="cursor:pointer;">
+        <div class="card project-card w-100 h-100 shadow" data-toggle="modal" data-target="#logisticsModal" style="cursor:pointer;">
           <img src="Images/project/Logistics.jpg" class="card-img-top" alt="Logistics">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Logistics Analysis</h5>
@@ -143,7 +143,7 @@
 
       <!-- Project 5 -->
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="card w-100 h-100 shadow" data-toggle="modal" data-target="#amazonModal" style="cursor:pointer;">
+        <div class="card project-card w-100 h-100 shadow" data-toggle="modal" data-target="#amazonModal" style="cursor:pointer;">
           <img src="Images/project/Amazon_sales.jpg" class="card-img-top" alt="Amazon">
            <div class="card-body d-flex flex-column">
             <h5 class="card-title">Amazon Sales Analysis</h5>
@@ -356,6 +356,15 @@
         flex-wrap: wrap;
         gap: 20px;
     }
+     .project-card {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 </style>
 <div class="skills-section" id="skills">
     <h2 class="text-center mb-4">Skills</h2>
